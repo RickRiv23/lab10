@@ -1,13 +1,14 @@
 .author-container{
-    width: 100px;
+    width: 150px;
     background-color: grey;
     border-radius: 5px;
+    padding: 10px;
 }
 
 .author-img{
     width: 100%;
 }
 
-figcaption{
+figcaption, figure{
     width: 100%;
 }
