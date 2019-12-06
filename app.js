@@ -237,7 +237,7 @@ function getAuthorList(){
            if (err) throw err;
            console.log("Connected!");
         
-           let sql = `SELECT authorId, firstName, lastName 
+           let sql = `SELECT authorId, firstName, lastName, portrait 
                         FROM q_author
                         ORDER BY lastName`;
         
