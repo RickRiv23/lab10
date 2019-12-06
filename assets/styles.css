@@ -2,6 +2,7 @@
     width: 80%;
     margin: 0px auto;
     display: inline-flex;
+    flex-wrap: wrap;
 }
 
 .author-container{
@@ -9,6 +10,7 @@
     background-color: grey;
     border-radius: 5px;
     padding: 10px;
+    margin-right: 20px;
 }
 
 .author-img{
