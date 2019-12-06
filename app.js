@@ -255,11 +255,11 @@ function getAuthorList(){
 function dbConnection(){
 
    let conn = mysql.createConnection({
-                 host: "cst336db.space",
-                 user: "cst336_dbUser",
-             password: "secret19",
-             database: "cst336_db"
-       }); //createConnection
+        host: "cst336db.space",
+        user: "cst336_dbUser27",
+        password: "uzef6q",
+        database:"cst336_db27"
+    }); //createConnection
 
 return conn;
 
