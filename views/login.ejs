@@ -8,39 +8,34 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
         <script>
-                $(document).ready(function() {
+            $(document).ready(function() {
                 
+                $("#loginBtn").on("click", function(){
+                //alert("works!");
                 
-                    $("#loginBtn").on("click", function(){
-                        
-                        //alert("works!");
-                        
-                        $.ajax({
-                        
-                              method: "post",
-                                 url: "/loginProcess",
-                            dataType: "json",
-                                data: { "username":$("#username").val(),
-                                        "password":$("#password").val() },
-                             success: function(result,status) {
-                                //alert(result);
-                                if (!result) {
-                                    
-                                    alert("Wrong credentials!");
-                                    
-                                } else {
-                                    
-                                    location.href = "/admin"; //redirects to admin route
-                                    
-                                }
-                            }
-                            
-                        });//ajax
-                        
-                    });//click
+                $.ajax({
+                    method: "POST",
+                    url: "/loginProcess",
+                    dataType: "json",
+                    data: { 
+                        "username":$("#username").val(),
+                        "password":$("#password").val()
+                    },
+                    success: function(result,status) {
+                        //alert(result);
+                        if (!result) {
+                            alert("Wrong credentials!");
+                        } else {
+                            location.href = "/admin"; //redirects to admin route
+                        }
+                    }
+                    
+                });//ajax
                 
-                }); //document.ready
-        
+                });//click
+                
+            }); //document.ready
+
         </script>
         
     </head>
