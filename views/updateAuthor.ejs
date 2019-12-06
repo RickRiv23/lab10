@@ -1,0 +1,45 @@
+  
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+    </head>
+    <body>
+
+        <h1> Updating Author </h1>
+        
+
+        <form method="POST">
+        
+            <lable>
+                First name: <input type="text" name="firstName" value="<%= authorInfo.firstName %>">
+            </lable>
+            <br>  
+            <label>
+                Last  name: <input type="text" name="lastName" value="<%= authorInfo.lastName %>">
+            </label>
+            <br>    
+            <div>
+                Gender: 
+                <label>
+                    <input type="radio" name="gender" value="F"  <%= authorInfo.sex == 'F'?"checked":"" %> >Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="M" <%= authorInfo.sex == 'M'?"checked":"" %> >Male
+                </label>
+            </div>
+            <label>
+                <input type="hidden" name="authorId" value="<%= authorInfo.authorId %>"> 
+            </label>
+            
+            <!--TODO: Add the remaining fields -->
+            <br><br>
+            <button>Update Author</button>
+        
+            <%= typeof(message) != "undefined"?message:"" %>
+            
+        </form>        
+
+        
+    </body>
+</html>
