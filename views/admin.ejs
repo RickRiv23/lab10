@@ -3,7 +3,7 @@
 <html>
     <head>
         <title> </title>
-        
+        <link rel="stylesheet" href="/styles.css" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
         
@@ -43,12 +43,22 @@
         
         <% authorList.forEach(function(author){  %>
         
-        
-            [<a href="/updateAuthor?authorId=<%= author.authorId %>">UPDATE</a>] 
-            [<a onclick="deleteConfirm()" class="removeAuthor" href="/deleteAuthor?authorId=<%= author.authorId %>">DELETE</a>] 
-            
-            <%= author.firstName %> <%= author.lastName %> <br>
-        
+        <div class="author-container">
+            <figure>
+                <img class="author-img" src="<%= author.url %>" />
+                <figcaption>
+                    <a href="/updateAuthor?authorId=<%= author.authorId %>">
+                        [UPDATE]
+                    </a>
+                    <a onclick="deleteConfirm()" class="removeAuthor" href="/deleteAuthor?authorId=<%= author.authorId %>">
+                        [DELETE]
+                    </a> 
+                    <br>
+                    <p><%= author.firstName %> <%= author.lastName %></p>
+                </figcaption>
+                <br>
+            </figure>
+        </div>
         
         <% }) %>
         

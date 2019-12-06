@@ -1,0 +1,13 @@
+.author-container{
+    width: 100px;
+    background-color: grey;
+    border-radius: 5px;
+}
+
+.author-img{
+    width: 100%;
+}
+
+figcaption{
+    width: 100%;
+}
