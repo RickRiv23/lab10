@@ -1,3 +1,9 @@
+.container{
+    width: 80%;
+    margin: 0px auto;
+    display: inline-flex;
+}
+
 .author-container{
     width: 150px;
     background-color: grey;
@@ -10,5 +16,6 @@
 }
 
 figcaption, figure{
+    margin: 0px auto;
     width: 100%;
 }
